@@ -7,5 +7,5 @@ def drawnet(G):
     import matplotlib.pyplot as plt
     import networkx
 
-    networkx.draw_graphviz(G)
+    networkx.draw(G)
     plt.show()

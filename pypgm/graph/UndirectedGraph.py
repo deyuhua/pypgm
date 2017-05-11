@@ -77,5 +77,6 @@ class UndirectedGraph(Graph):
 
     def get_markov_blanket(self, node):
 
-        pass
+        return self.neighbors(node)
+
 

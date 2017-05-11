@@ -105,8 +105,9 @@ class DirectedGraph(DiGraph):
         parent = self.get_parent(node)
         children = self.get_children(node)
 
-        parent_of_children = reduce(lambda res, node: self.get_parent() + res, children, [])
+        parent_of_children = reduce(lambda res, n: self.get_parent(n) + res, children, [])
 
         result = parent + children + parent_of_children
+        result.remove(node)
 
         return result
